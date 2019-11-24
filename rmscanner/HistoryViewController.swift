@@ -19,7 +19,12 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        historyRecords = DBManager.shared.loadHistory()
+        let dbManager = DBManager()
+        do {
+            try historyRecords = dbManager.readAll()
+        } catch {
+            print(error)
+        }
         
         historyTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
@@ -35,7 +40,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell:UITableViewCell = historyTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! UITableViewCell
         
-        cell.textLabel?.text = historyRecords[indexPath.row].message
+        cell.textLabel?.text = "m:" + historyRecords[indexPath.row].message + ",n:" + historyRecords[indexPath.row].notes + "d:" + historyRecords[indexPath.row].date;
         
         return cell
     }

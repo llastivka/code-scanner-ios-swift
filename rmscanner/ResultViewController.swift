@@ -15,6 +15,9 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let dbManager = DBManager()
+        let record = HistoryRecord(recordId: 1, message: resultText.text!, notes: "notes", date: "2019-11-24")
+        dbManager.create(record: record)
     }
     
     

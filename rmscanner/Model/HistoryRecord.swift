@@ -10,11 +10,11 @@ import Foundation
 
 struct HistoryRecord {
     var recordId : Int
-    var message : String?
-    var notes : String?
-    var date : Date
+    var message : String
+    var notes : String
+    var date : String
     
-    init(recordId : Int, message : String?, notes : String?, date : Date) {
+    init(recordId : Int, message : String, notes : String, date : String) {
         self.recordId = recordId
         self.message = message
         self.notes = notes

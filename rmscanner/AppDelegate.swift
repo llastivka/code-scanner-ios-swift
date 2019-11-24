@@ -35,13 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        if (DBManager.shared.createDatabase()) {
-            print("Database was successfylly created.")
-            DBManager.shared.insertHistoryData()
-        } else {
-            print("Failed to create database.")
-            DBManager.shared.insertHistoryData()
+        let dbManager = DBManager()
+        do {
+            try dbManager.openDB()
+            try dbManager.createTables()
+        } catch {
+            print(error)
         }
+        let record = HistoryRecord(recordId: 1, message: "message", notes: "notes", date: "2019-11-24")
+        dbManager.create(record: record)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
