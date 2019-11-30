@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import os.log
 
 class ResultViewController: UIViewController {
     
     @IBOutlet weak var resultText: UILabel!
     
+    let oslog = OSLog(subsystem: "rmscanner", category: "resultscreen")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let dbManager = DBManager()
-        let record = HistoryRecord(recordId: 1, message: resultText.text!, notes: "notes", date: "2019-11-24")
-        dbManager.create(record: record)
+        if (resultText.text != nil && !(resultText.text?.isEmpty)!) {
+            let dbManager = DBManager()
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy.MM.dd"
+            let dateString = formatter.string(from: date)
+            let record = HistoryRecord(recordId: 1, message: resultText.text!, notes: "", date: dateString)
+            dbManager.create(record: record)
+            
+            let preferences = UserDefaults.standard
+            let autoNavigationKey = "auto"
+            if preferences.object(forKey: autoNavigationKey) == nil {
+                os_log("Failed to retreive auto navigation settings.")
+            } else {
+                let autoNavigationSetting = preferences.bool(forKey: autoNavigationKey)
+                os_log("Auto navigation was set to %@.", autoNavigationSetting.description)
+                if autoNavigationSetting {
+                    navigateToBrowser()
+                }
+            }
+            
+        }
     }
     
     
@@ -32,7 +54,11 @@ class ResultViewController: UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
     }
     
-    @IBAction func navigateToBrowser(_ sender: UIButton) {
+    @IBAction func navigateButtonClicked(_ sender: UIButton) {
+        navigateToBrowser()
+    }
+    
+    func navigateToBrowser() {
         var url = ""
         let result = resultText.text!
         if (result.contains("http")) {

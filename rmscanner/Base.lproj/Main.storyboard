@@ -83,7 +83,7 @@
                                         <rect key="frame" x="204" y="0.0" width="61" height="30"/>
                                         <state key="normal" title="Navigate"/>
                                         <connections>
-                                            <action selector="navigateToBrowser:" destination="nYT-N9-aai" eventType="touchUpInside" id="EDp-vR-VFb"/>
+                                            <action selector="navigateButtonClicked:" destination="nYT-N9-aai" eventType="touchUpInside" id="EDp-vR-VFb"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -135,7 +135,7 @@
         <!--Settings View Controller-->
         <scene sceneID="5Zp-tr-JZm">
             <objects>
-                <viewController title="Settings View Controller" id="Ibr-9Y-3yu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="Settings View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ibr-9Y-3yu" customClass="SettingsViewController" customModule="rmscanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vEp-xX-JeT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +149,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cVO-9O-86K">
                                 <rect key="frame" x="163" y="183" width="51" height="31"/>
                                 <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="setAutomaticNavigation:" destination="Ibr-9Y-3yu" eventType="valueChanged" id="XTq-U1-fpA"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automatic navigation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-U8-DFc">
                                 <rect key="frame" x="100" y="152" width="175" height="21"/>

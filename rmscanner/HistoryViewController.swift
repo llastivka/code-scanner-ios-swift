@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var historyRecords : [HistoryRecord] = []
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated : Bool) {
         super.viewDidLoad()
         
         let dbManager = DBManager()
@@ -40,13 +40,18 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell:UITableViewCell = historyTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! UITableViewCell
         
-        cell.textLabel?.text = "m:" + historyRecords[indexPath.row].message + ",n:" + historyRecords[indexPath.row].notes + "d:" + historyRecords[indexPath.row].date;
+        if historyRecords[indexPath.row].notes.isEmpty {
+            cell.textLabel?.text = historyRecords[indexPath.row].message
+        } else {
+            cell.textLabel?.text = historyRecords[indexPath.row].notes
+        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
+        
     }
     
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

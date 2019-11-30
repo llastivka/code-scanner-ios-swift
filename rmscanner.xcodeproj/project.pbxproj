@@ -13,6 +13,8 @@
 		A1BBC0FA238ACF3100EAA6CA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0F0238ACF3100EAA6CA /* DBManager.swift */; };
 		A1BBC0FB238ACF3100EAA6CA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0F2238ACF3100EAA6CA /* FMDatabase.m */; };
 		A1BBC0FC238ACF3100EAA6CA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0F5238ACF3100EAA6CA /* FMDatabaseQueue.m */; };
+		A1DE9B552392D3F300786AE7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE9B542392D3F300786AE7 /* SettingsViewController.swift */; };
+		A1DE9B572392D71000786AE7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE9B562392D71000786AE7 /* CameraViewController.swift */; };
 		A1ED797A23783DD4004C7791 /* HistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED797923783DD4004C7791 /* HistoryRecord.swift */; };
 		A1F60EF123780C02008ED157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F60EF023780C02008ED157 /* AppDelegate.swift */; };
 		A1F60EF323780C02008ED157 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F60EF223780C02008ED157 /* FirstViewController.swift */; };
@@ -37,6 +39,8 @@
 		A1BBC0F4238ACF3100EAA6CA /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		A1BBC0F5238ACF3100EAA6CA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		A1BBC0F6238ACF3100EAA6CA /* rmscanner-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rmscanner-Bridging-Header.h"; sourceTree = "<group>"; };
+		A1DE9B542392D3F300786AE7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A1DE9B562392D71000786AE7 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A1ED797923783DD4004C7791 /* HistoryRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecord.swift; sourceTree = "<group>"; };
 		A1F60EED23780C02008ED157 /* rmscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rmscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F60EF023780C02008ED157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				A1F60EFB23780C03008ED157 /* LaunchScreen.storyboard */,
 				A1F60EFE23780C03008ED157 /* Info.plist */,
 				A1F60F0423782650008ED157 /* ResultViewController.swift */,
+				A1DE9B542392D3F300786AE7 /* SettingsViewController.swift */,
+				A1DE9B562392D71000786AE7 /* CameraViewController.swift */,
 			);
 			path = rmscanner;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				A1ED797A23783DD4004C7791 /* HistoryRecord.swift in Sources */,
 				A1BBC0F8238ACF3100EAA6CA /* FMResultSet.m in Sources */,
 				A1BBC0FB238ACF3100EAA6CA /* FMDatabase.m in Sources */,
+				A1DE9B572392D71000786AE7 /* CameraViewController.swift in Sources */,
 				A1F60EF123780C02008ED157 /* AppDelegate.swift in Sources */,
 				A1BBC0FA238ACF3100EAA6CA /* DBManager.swift in Sources */,
 				A1F60F0523782650008ED157 /* ResultViewController.swift in Sources */,
@@ -205,6 +212,7 @@
 				A1BBC0FC238ACF3100EAA6CA /* FMDatabaseQueue.m in Sources */,
 				A1F60EF323780C02008ED157 /* FirstViewController.swift in Sources */,
 				A1BBC0F7238ACF3100EAA6CA /* FMDatabaseAdditions.m in Sources */,
+				A1DE9B552392D3F300786AE7 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
