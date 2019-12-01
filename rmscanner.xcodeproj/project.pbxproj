@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A159616C239422000055BEFA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A159616B239422000055BEFA /* HistoryViewController.swift */; };
 		A1BBC0F7238ACF3100EAA6CA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0ED238ACF3100EAA6CA /* FMDatabaseAdditions.m */; };
 		A1BBC0F8238ACF3100EAA6CA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0EE238ACF3100EAA6CA /* FMResultSet.m */; };
 		A1BBC0F9238ACF3100EAA6CA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0EF238ACF3100EAA6CA /* FMDatabasePool.m */; };
@@ -17,8 +18,6 @@
 		A1DE9B572392D71000786AE7 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DE9B562392D71000786AE7 /* CameraViewController.swift */; };
 		A1ED797A23783DD4004C7791 /* HistoryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED797923783DD4004C7791 /* HistoryRecord.swift */; };
 		A1F60EF123780C02008ED157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F60EF023780C02008ED157 /* AppDelegate.swift */; };
-		A1F60EF323780C02008ED157 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F60EF223780C02008ED157 /* FirstViewController.swift */; };
-		A1F60EF523780C02008ED157 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F60EF423780C02008ED157 /* HistoryViewController.swift */; };
 		A1F60EF823780C02008ED157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F60EF623780C02008ED157 /* Main.storyboard */; };
 		A1F60EFA23780C03008ED157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F60EF923780C03008ED157 /* Assets.xcassets */; };
 		A1F60EFD23780C03008ED157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F60EFB23780C03008ED157 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A159616B239422000055BEFA /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A1BBC0EA238ACF3100EAA6CA /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		A1BBC0EB238ACF3100EAA6CA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		A1BBC0EC238ACF3100EAA6CA /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		A1ED797923783DD4004C7791 /* HistoryRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecord.swift; sourceTree = "<group>"; };
 		A1F60EED23780C02008ED157 /* rmscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rmscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F60EF023780C02008ED157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1F60EF223780C02008ED157 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A1F60EF423780C02008ED157 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A1F60EF723780C02008ED157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1F60EF923780C03008ED157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1F60EFC23780C03008ED157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,8 +113,7 @@
 				A1BBC0E8238ACEDC00EAA6CA /* fmdb */,
 				A1ED797823783DB6004C7791 /* Model */,
 				A1F60EF023780C02008ED157 /* AppDelegate.swift */,
-				A1F60EF223780C02008ED157 /* FirstViewController.swift */,
-				A1F60EF423780C02008ED157 /* HistoryViewController.swift */,
+				A159616B239422000055BEFA /* HistoryViewController.swift */,
 				A1F60EF623780C02008ED157 /* Main.storyboard */,
 				A1F60EF923780C03008ED157 /* Assets.xcassets */,
 				A1F60EFB23780C03008ED157 /* LaunchScreen.storyboard */,
@@ -200,17 +197,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F60EF523780C02008ED157 /* HistoryViewController.swift in Sources */,
 				A1ED797A23783DD4004C7791 /* HistoryRecord.swift in Sources */,
 				A1BBC0F8238ACF3100EAA6CA /* FMResultSet.m in Sources */,
 				A1BBC0FB238ACF3100EAA6CA /* FMDatabase.m in Sources */,
 				A1DE9B572392D71000786AE7 /* CameraViewController.swift in Sources */,
+				A159616C239422000055BEFA /* HistoryViewController.swift in Sources */,
 				A1F60EF123780C02008ED157 /* AppDelegate.swift in Sources */,
 				A1BBC0FA238ACF3100EAA6CA /* DBManager.swift in Sources */,
 				A1F60F0523782650008ED157 /* ResultViewController.swift in Sources */,
 				A1BBC0F9238ACF3100EAA6CA /* FMDatabasePool.m in Sources */,
 				A1BBC0FC238ACF3100EAA6CA /* FMDatabaseQueue.m in Sources */,
-				A1F60EF323780C02008ED157 /* FirstViewController.swift in Sources */,
 				A1BBC0F7238ACF3100EAA6CA /* FMDatabaseAdditions.m in Sources */,
 				A1DE9B552392D3F300786AE7 /* SettingsViewController.swift in Sources */,
 			);

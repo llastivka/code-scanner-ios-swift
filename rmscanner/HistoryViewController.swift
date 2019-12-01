@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Foundation
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let cellReuseIdentifier = "cell"
+    let cellReuseIdentifier = "RecordCell"
     
     @IBOutlet var historyTable: UITableView!
     
     var historyRecords : [HistoryRecord] = []
+    
+    class HistoryTableViewCell: UITableViewCell {
+        
+        @IBOutlet weak var dateLabel: UILabel!
+        @IBOutlet weak var messageLabel: UILabel!
+        
+        @IBAction func tapEditButton(_ sender: UIButton) {
+        }
+        
+    }
     
     override func viewWillAppear(_ animated : Bool) {
         super.viewDidLoad()
@@ -26,7 +37,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(error)
         }
         
-        historyTable.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+//        historyTable.register(HistoryTableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
         historyTable.delegate = self
         historyTable.dataSource = self
@@ -38,13 +49,15 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = historyTable.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! HistoryTableViewCell
         
-        if historyRecords[indexPath.row].notes.isEmpty {
-            cell.textLabel?.text = historyRecords[indexPath.row].message
-        } else {
-            cell.textLabel?.text = historyRecords[indexPath.row].notes
-        }
+//        let historyRecord = historyRecords[indexPath.row]
+//        cell.dateLabel?.text = historyRecord.date
+//        if historyRecord.notes.isEmpty {
+//            cell.messageLabel?.text = historyRecord.message
+//        } else {
+//            cell.messageLabel?.text = historyRecord.notes
+//        }
         
         return cell
     }
@@ -53,30 +66,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("You tapped cell number \(indexPath.row).")
         
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//
-//        let currentRecord = historyRecords[indexPath.row]
-//
-//        cell.textLabel?.text = currentRecord.message
-//        cell.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
-//
-//        let sessionConfiguration = URLSessionConfiguration.default
-//        let session = URLSession(configuration: URLSessionConfiguration.default)
-//        let task = session.dataTask(with: URL(string: currentRecord.coverURL)!) { (imageData, response, error) in
-//            if let data = imageData {
-//                DispatchQueue.main.async {
-//                    cell.imageView?.image = UIImage(data: data)
-//                    cell.layoutSubviews()
-//                }
-//            }
-//        }
-//        task.resume()
-//
-//        return cell
-//    }
-
 
 }
 

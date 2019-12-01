@@ -59,19 +59,22 @@ class ResultViewController: UIViewController {
     }
     
     func navigateToBrowser() {
-        var url = ""
-        let result = resultText.text!
+        var urlString = ""
+        let result = resultText.text ?? ""
         if (result.contains("http")) {
-            url = resultText.text!
+            urlString = resultText.text!
         } else {
-            url = "http://www.google.com/search?q=" + result ;
+            urlString = "http://www.google.com/search?q=" + (result).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         }
-        if let url = URL(string: url), UIApplication.shared.canOpenURL(url) {
+        if let url = URL(string: urlString), UIApplication.shared.canOpenURL(url) {
+            os_log("Opening URL: %@. ", urlString)
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             } else {
                 UIApplication.shared.openURL(url)
             }
+        } else {
+            os_log("Failed to open URL: %@. ", urlString)
         }
     }
 }
