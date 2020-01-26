@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A159616C239422000055BEFA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A159616B239422000055BEFA /* HistoryViewController.swift */; };
+		A16620B923DDDC3500107CE4 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16620B823DDDC3500107CE4 /* HistoryTableViewCell.swift */; };
 		A1BBC0F7238ACF3100EAA6CA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0ED238ACF3100EAA6CA /* FMDatabaseAdditions.m */; };
 		A1BBC0F8238ACF3100EAA6CA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0EE238ACF3100EAA6CA /* FMResultSet.m */; };
 		A1BBC0F9238ACF3100EAA6CA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BBC0EF238ACF3100EAA6CA /* FMDatabasePool.m */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		A159616B239422000055BEFA /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A16620B823DDDC3500107CE4 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		A1BBC0EA238ACF3100EAA6CA /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		A1BBC0EB238ACF3100EAA6CA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		A1BBC0EC238ACF3100EAA6CA /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				A1F60F0423782650008ED157 /* ResultViewController.swift */,
 				A1DE9B542392D3F300786AE7 /* SettingsViewController.swift */,
 				A1DE9B562392D71000786AE7 /* CameraViewController.swift */,
+				A16620B823DDDC3500107CE4 /* HistoryTableViewCell.swift */,
 			);
 			path = rmscanner;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				A1ED797A23783DD4004C7791 /* HistoryRecord.swift in Sources */,
 				A1BBC0F8238ACF3100EAA6CA /* FMResultSet.m in Sources */,
+				A16620B923DDDC3500107CE4 /* HistoryTableViewCell.swift in Sources */,
 				A1BBC0FB238ACF3100EAA6CA /* FMDatabase.m in Sources */,
 				A1DE9B572392D71000786AE7 /* CameraViewController.swift in Sources */,
 				A159616C239422000055BEFA /* HistoryViewController.swift in Sources */,
@@ -356,6 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VZ8AC7HQ4;
 				INFOPLIST_FILE = rmscanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VZ8AC7HQ4;
 				INFOPLIST_FILE = rmscanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

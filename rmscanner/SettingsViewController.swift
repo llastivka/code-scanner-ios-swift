@@ -12,10 +12,23 @@ import os.log
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var autoNavSwitch: UISwitch!
     let oslog = OSLog(subsystem: "rmscanner", category: "settings")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let preferences = UserDefaults.standard
+        let autoNavigationKey = "auto"
+        if preferences.object(forKey: autoNavigationKey) == nil {
+            os_log("Failed to retreive auto navigation settings.")
+        } else {
+            let autoNavigationSetting = preferences.bool(forKey: autoNavigationKey)
+            os_log("Auto navigation was set to %@.", autoNavigationSetting.description)
+            if !autoNavigationSetting {
+                autoNavSwitch.isOn = false;
+            }
+        }
     }
     
     @IBAction func setAutomaticNavigation(_ sender: UISwitch) {

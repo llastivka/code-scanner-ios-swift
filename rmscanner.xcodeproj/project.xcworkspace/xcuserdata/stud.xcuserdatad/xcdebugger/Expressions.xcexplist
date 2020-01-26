@@ -3,21 +3,111 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ResultViewController.navigateToBrowser():ResultViewController.swift">
+         contextName = "DBManager.insert(record:):DBManager.swift">
          <PersistentStrings>
             <PersistentString
-               value = "UIApplication.shared.canOpenURL(url)">
+               value = "sqlite3_prepare_v2(db, insertStatementString, -1, &amp;insertStatement, nil)">
+            </PersistentString>
+            <PersistentString
+               value = "SQLITE_OK">
+            </PersistentString>
+            <PersistentString
+               value = "SQLITE_ERROR">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.applicationDidBecomeActive(_:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dbManager.read(id : 1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HistoryViewController.viewDidLoad():HistoryViewController.swift">
       </ContextState>
       <ContextState
          contextName = "HistoryViewController.tableView(_:cellForRowAt:):HistoryViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "historyRecords[indexPath.row].date">
+               value = "historyRecords">
+            </PersistentString>
+            <PersistentString
+               value = "historyRecord.date">
             </PersistentString>
             <PersistentString
                value = "cell.dateLabel">
+            </PersistentString>
+            <PersistentString
+               value = "historyRecords[indexPath.row].date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DBManager.createTables():DBManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ret != SQLITE_OK">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HistoryViewController.viewWillAppear(_:):HistoryViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ResultViewController.viewDidLoad():ResultViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HistoryViewController.tableView(_:didSelectRowAt:):HistoryViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tableView.cellForRow(at: indexPath)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DBManager.readAll():DBManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "readAllEntryStmt">
+            </PersistentString>
+            <PersistentString
+               value = "String(sqlite3_column_text(readAllEntryStmt, 1))">
+            </PersistentString>
+            <PersistentString
+               value = "sqlite3_column_text(readAllEntryStmt, 4))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DBManager.read():DBManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(queryStatement, 2))">
+            </PersistentString>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(queryStatement, 1))">
+            </PersistentString>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(queryStatement, -1))">
+            </PersistentString>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(queryStatement, 0))">
+            </PersistentString>
+            <PersistentString
+               value = "String(sqlite3_column_text(queryStatement, 1))">
+            </PersistentString>
+            <PersistentString
+               value = "String(cString: sqlite3_column_text(queryStatement, 3))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ResultViewController.navigateToBrowser():ResultViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIApplication.shared.canOpenURL(url)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

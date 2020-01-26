@@ -18,14 +18,22 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if (resultText.text != nil && !(resultText.text?.isEmpty)!) {
+        if (resultText != nil && resultText.text != nil && !(resultText.text?.isEmpty)!) {
             let dbManager = DBManager()
             let date = Date()
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy.MM.dd"
             let dateString = formatter.string(from: date)
-            let record = HistoryRecord(recordId: 1, message: resultText.text!, notes: "", date: dateString)
-            dbManager.create(record: record)
+            
+            var nextIndex : Int
+            let historyRecords = dbManager.read()
+            if historyRecords.count == 0 {
+                nextIndex = 1;
+            } else {
+                nextIndex = historyRecords[historyRecords.count - 1].recordId + 1
+            }
+            let record = HistoryRecord(recordId: nextIndex, message: resultText.text!, notes: "", date: dateString)
+            dbManager.insert(record: record)
             
             let preferences = UserDefaults.standard
             let autoNavigationKey = "auto"

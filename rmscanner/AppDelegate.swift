@@ -35,6 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+//        let dBManager = DBManager()
+//        dBManager.createTable();
+        
+        
 //        let dbManager = DBManager()
 //        do {
 //            try dbManager.openDB()
@@ -44,6 +49,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //        let record = HistoryRecord(recordId: 1, message: "message", notes: "notes", date: "2019-11-24")
 //        dbManager.create(record: record)
+        
+//        var hr : HistoryRecord = HistoryRecord(recordId: 2, message: "2", notes: "2", date: "2")
+//        do {
+//            try hr = dbManager.read(id: 1)
+//        } catch {
+//            print(error)
+//        }
+//        var v = hr.message
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

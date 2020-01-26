@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rmscanner/fmdb/DBManager.swift"
-            timestampString = "596903571.834577"
+            timestampString = "601753928.176257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "read(id:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "insert(record:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rmscanner/fmdb/DBManager.swift"
-            timestampString = "596903571.834631"
+            timestampString = "601753928.176381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "readAll()"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "read()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rmscanner/fmdb/DBManager.swift"
-            timestampString = "596903571.834671"
+            timestampString = "601753928.176433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "readAll()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "createTable()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "rmscanner/fmdb/DBManager.swift"
-            timestampString = "596903571.834707"
+            timestampString = "601753928.176512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "readAll()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "insert(record:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
